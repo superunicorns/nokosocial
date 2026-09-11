@@ -3,7 +3,7 @@
 
 :root {
   --text-dark: hsl(252, 30%, 17%);
-  --text-gray: hsl(252, 15%, 65%);
+  --text-gray: hsl(252, 15%, 75%);
 
   --bg-white: hsl(0, 0%, 100%);
   --bg-light: hsl(252, 30%, 95%);
@@ -101,10 +101,21 @@ nav .container {
   justify-content: space-between;
 }
 
+.icon-size {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.icon-gray {
+  color: var(--text-gray);
+}
+
 nav .search-bar {
   background: var(--bg-light);
   border-radius: var(--button-border-radius);
   padding: var(--search-padding);
+  display: flex;
+  align-items: center;
 }
 
 nav .search-bar input[type="search"] {
