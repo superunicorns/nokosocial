@@ -183,6 +183,7 @@ main .container .left .profile {
   cursor: pointer;
   transition: all 300ms ease;
   position: relative;
+  border: 3px solid transparent;
 }
 
 .left .sidebar .menu-item span {
@@ -219,7 +220,8 @@ main .container .left .profile {
 }
 
 .left .sidebar .active {
-  background: var(--color-secondary);
+  background: var(--bg-light);
+  border: 3px solid var(--bg-white);
 }
 
 .left .sidebar .active svg,
@@ -238,11 +240,13 @@ main .container .left .profile {
 
 .left .sidebar .menu-item:first-child.active {
   border-top-left-radius: var(--card-border-radius);
+  border-top-right-radius: var(--card-border-radius);
   overflow: hidden;
 }
 
 .left .sidebar .menu-item:last-child.active {
   border-bottom-left-radius: var(--card-border-radius);
+  border-bottom-right-radius: var(--card-border-radius);
   overflow: hidden;
 }
 
