@@ -532,3 +532,35 @@ main .container .left .profile {
   bottom: 0;
   right: 0;
 }
+
+/* ------------ Friend Requests ------------ */
+.right .friend-requests {
+  margin-top: 1rem;
+}
+
+.right .friend-requests h4 {
+  color: var(--text-gray);
+  margin: 1rem 0;
+}
+
+.right .request {
+  background: var(--bg-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 0.7rem;
+}
+
+.right .request .info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.right .request .info p {
+  font-size: 0.8rem;
+}
+
+.right .request .action {
+  display: flex;
+  gap: 1rem;
+}
