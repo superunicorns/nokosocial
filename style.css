@@ -13,7 +13,7 @@
 
   --color-primary: hsl(252, 75%, 60%);
   --color-secondary: hsl(252, 100%, 95%);
-  --color-success: hsl(149, 84.7%, 41%);
+  --color-success: hsl(120, 77.6%, 72%);
   --color-danger: hsl(0, 87.2%, 60.2%);
 
   --button-border-radius: 2rem;
@@ -113,7 +113,7 @@ nav .container {
   color: var(--text-gray);
 }
 
-nav .search-bar {
+.search-bar {
   background: var(--bg-light);
   border-radius: var(--button-border-radius);
   padding: var(--search-padding);
@@ -121,7 +121,7 @@ nav .search-bar {
   align-items: center;
 }
 
-nav .search-bar input[type="search"] {
+.search-bar input[type="search"] {
   background: transparent;
   width: 30vw;
   margin-left: 1rem;
@@ -129,7 +129,7 @@ nav .search-bar input[type="search"] {
   color: var(--text-dark);
 }
 
-nav .search-bar input[type="search"]::placeholder {
+.search-bar input[type="search"]::placeholder {
   color: var(--text-gray);
 }
 
@@ -448,4 +448,87 @@ main .container .left .profile {
 
 .middle .liked-by p {
   margin-left: 0.5rem;
+}
+
+/* ------------ Right ------------ */
+/* ------------ Messages ------------ */
+.main .container .right {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .messages {
+  background: var(--bg-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right .messages .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages .search-bar {
+  margin-bottom: 1rem;
+}
+
+.right .messages .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid var(--bg-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.right .messages .category .active {
+  border-color: var(--text-dark);
+}
+
+.right .messages .messages-requests {
+  color: var(--color-primary);
+}
+
+.right .messages .message {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+.right .messages .message:last-child {
+  margin: 0;
+}
+
+.right .messages .message p {
+  font-size: 0.8rem;
+}
+
+.right .messages .message .profile-picture {
+  position: relative;
+  overflow: visible;
+}
+
+.right .messages .message .profile-picture img {
+  border-radius: 50%;
+}
+
+.right .messages .message .profile-picture .active {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--bg-white);
+  background: var(--color-success);
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
