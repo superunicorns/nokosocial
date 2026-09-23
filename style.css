@@ -13,8 +13,8 @@
 
   --color-primary: hsl(252, 75%, 60%);
   --color-secondary: hsl(252, 100%, 95%);
-  --color-success: hsl(120, 77.6%, 72%);
-  --color-danger: hsl(0, 87.2%, 60.2%);
+  --color-success: hsl(152, 75%, 60%);
+  --color-danger: hsl(0, 75%, 60%);
 
   --button-border-radius: 2rem;
   --card-border-radius: 1rem;
@@ -563,4 +563,156 @@ main .container .left .profile {
 .right .request .action {
   display: flex;
   gap: 1rem;
+}
+
+/* ------------ Theme Customization ------------ */
+.customize-theme {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+}
+
+.customize-theme .card {
+  background: var(--bg-white);
+  padding: 3rem;
+  border-radius: var(--card-border-radius);
+  width: 50%;
+}
+
+/* ------------ Font Sizes ------------ */
+.customize-theme .font-size {
+  margin-top: 5rem;
+}
+
+.customize-theme .font-size > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-light);
+  padding: var(--search-padding);
+  border-radius: var(--card-border-radius);
+}
+
+.customize-theme .choose-size {
+  background: var(--color-secondary);
+  height: 0.3rem;
+  width: 100%;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customize-theme .choose-size span {
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.customize-theme .choose-size span.active {
+  background: var(--color-primary);
+}
+
+/* ------------ Colors ------------ */
+.customize-theme .color {
+  margin-top: 2rem;
+}
+
+.customize-theme .choose-color {
+  background: var(--bg-light);
+  padding: var(--search-padding);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customize-theme .choose-color span {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+
+.customize-theme .choose-color span:nth-child(1) {
+  background: hsl(252, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(2) {
+  background: hsl(52, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(3) {
+  background: hsl(0, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(4) {
+  background: hsl(152, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(5) {
+  background: hsl(202, 75%, 60%);
+}
+
+.customize-theme .choose-color span.active {
+  border: 5px solid var(--bg-white);
+}
+
+/* ------------ Backgrounds ------------ */
+.customize-theme .background {
+  margin-top: 2rem;
+}
+
+.customize-theme .choose-bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.customize-theme .choose-bg > div {
+  padding: var(--card-padding);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.customize-theme .choose-bg > div.active {
+  border: 2px solid var(--color-primary);
+}
+
+.customize-theme .choose-bg .bg-1 {
+  background: white;
+  color: black;
+}
+
+.customize-theme .choose-bg .bg-2 {
+  background: var(--bg-dark);
+  color: white;
+}
+
+.customize-theme .choose-bg .bg-3 {
+  background: var(--bg-black);
+  color: white;
+}
+
+.customize-theme .choose-bg > div span {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--text-gray);
+  margin-right: 1rem;
+  border-radius: 50%;
 }
