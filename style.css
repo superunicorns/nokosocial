@@ -586,6 +586,7 @@ main .container .left .profile {
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
 }
 
 /* ------------ Font Sizes ------------ */
@@ -745,6 +746,10 @@ main .container .left .profile {
   .left .btn {
     display: none;
   }
+
+  .customize-theme .card {
+    width: 92vw;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -786,7 +791,7 @@ main .container .left .profile {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   nav .create {
     display: none;
   }
