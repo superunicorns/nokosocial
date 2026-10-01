@@ -2,6 +2,7 @@
 
 
 :root {
+  --primary-color-hue: 252;
   --text-dark: hsl(252, 30%, 17%);
   --text-gray: hsl(252, 15%, 75%);
 
@@ -11,7 +12,7 @@
   --bg-dark: hsl(252, 30%, 17%);
   --bg-black: hsl(252, 30%, 10%);
 
-  --color-primary: hsl(252, 75%, 60%);
+  --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
   --color-secondary: hsl(252, 100%, 95%);
   --color-success: hsl(152, 75%, 60%);
   --color-danger: hsl(0, 75%, 60%);
@@ -666,7 +667,7 @@ main .container .left .profile {
 }
 
 .customize-theme .choose-color span.active {
-  border: 5px solid var(--bg-white);
+  border: 5px solid var(--text-dark);
 }
 
 /* ------------ Backgrounds ------------ */
