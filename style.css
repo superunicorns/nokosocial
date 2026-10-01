@@ -3,13 +3,18 @@
 
 :root {
   --primary-color-hue: 252;
+  --dark-color-lightness: 17%;
+  --light-color-lightness: 95%; 
+  --white-color-lightness: 100%;
+
   --text-dark: hsl(252, 30%, 17%);
+  --text-white: hsl(0, 0%, 100%);
   --text-gray: hsl(252, 15%, 75%);
 
-  --bg-white: hsl(0, 0%, 100%);
-  --bg-light: hsl(252, 30%, 97%);
+  --bg-white: hsl(0, 0%, var(--white-color-lightness));
+  --bg-light: hsl(252, 30%, var(--light-color-lightness));
   --bg-gray: hsl(252, 15%, 65%);
-  --bg-dark: hsl(252, 30%, 17%);
+  --bg-dark: hsl(252, 30%, var(--dark-color-lightness));
   --bg-black: hsl(252, 30%, 10%);
 
   --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
@@ -698,18 +703,18 @@ main .container .left .profile {
 }
 
 .customize-theme .choose-bg .bg-1 {
-  background: white;
-  color: black;
+  background: var(--text-white);
+  color: var(--text-dark);
 }
 
 .customize-theme .choose-bg .bg-2 {
   background: var(--bg-dark);
-  color: white;
+  color: var(--text-white);
 }
 
 .customize-theme .choose-bg .bg-3 {
   background: var(--bg-black);
-  color: white;
+  color: var(--text-white);
 }
 
 .customize-theme .choose-bg > div span {

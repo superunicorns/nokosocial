@@ -11,6 +11,9 @@ const themeModal = document.querySelector(".customize-theme");
 const fontSizes = document.querySelectorAll(".choose-size span");
 var root = document.querySelector(":root");
 const colorPalette = document.querySelectorAll(".choose-color span");
+const bg1 = document.querySelector(".bg-1");
+const bg2 = document.querySelector(".bg-2");
+const bg3 = document.querySelector(".bg-3");
 
 const changeActiveItem = () => {
   menuItems.forEach(item => {
@@ -142,4 +145,59 @@ colorPalette.forEach(color => {
     color.classList.add("active");
     root.style.setProperty("--primary-color-hue", primaryHue);
   })
+})
+
+// Theme Background
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+let textDark;
+let textWhite;
+
+const changeBg = () => {
+  root.style.setProperty("--light-color-lightness", lightColorLightness);
+  root.style.setProperty("--white-color-lightness", whiteColorLightness);
+  root.style.setProperty("--dark-color-lightness", darkColorLightness);
+
+  root.style.setProperty("--text-dark", textDark);
+  root.style.setProperty("--text-white", textWhite);
+}
+
+bg1.addEventListener("click", () => {
+  textDark = "hsl(252, 30%, 17%)";
+  
+  bg1.classList.add("active");
+
+  bg2.classList.remove("active");
+  bg3.classList.remove("active");
+
+  window.location.reload();
+})
+
+bg2.addEventListener("click", () => {
+  darkColorLightness = "95%";
+  whiteColorLightness = "20%";
+  lightColorLightness = "15%";
+  textWhite = "hsl(0, 0%, 100%)";
+
+  bg2.classList.add("active");
+
+  bg1.classList.remove("active");
+  bg3.classList.remove("active");
+
+  changeBg();
+})
+
+bg3.addEventListener("click", () => {
+  darkColorLightness = "95%";
+  whiteColorLightness = "10%";
+  lightColorLightness = "0%";
+  textWhite = "hsl(0, 0%, 100%)";
+
+  bg3.classList.add("active");
+
+  bg1.classList.remove("active");
+  bg2.classList.remove("active");
+
+  changeBg();
 })
